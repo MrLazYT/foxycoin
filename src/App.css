@@ -1,0 +1,198 @@
+/* Анімація для фону */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Основний стиль body */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #f0bc79;
+  background-image: url('./assets/Space.png'); /* Фонове зображення */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  animation: moveBackground 20s infinite linear;
+}
+
+/* Хедер */
+header {
+  display: flex;
+  justify-content: center; /* Централізація навігації */
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9); /* Напівпрозорий чорний */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Тінь */
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Логотип */
+header .logo-container {
+  display: flex;
+  align-items: center;
+  position: absolute; /* Закріплено зліва */
+  left: 30px;
+}
+
+header .logo-container img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+header .logo-container span {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Централізація навігації */
+header nav {
+  display: flex;
+  justify-content: center;
+  flex: 1; /* Розтягує меню */
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Відстань між пунктами меню */
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(202, 226, 95);
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+header nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #e94560;
+  transform: scale(1.1);
+}
+
+/* Головна секція */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.home .content {
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.6); /* Напівпрозорий чорний */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Тінь */
+  margin: 0 auto;
+}
+
+/* Лисички за межами секцій */
+.image-left {
+  position: fixed;
+  left: 0;
+  top: 30%; /* Лисичка зліва */
+  width: 150px;
+  z-index: 10;
+}
+
+.image-right {
+  position: fixed;
+  right: 0;
+  top: 50%; /* Лисичка справа */
+  width: 150px;
+  z-index: 10;
+}
+
+/* Секції (Tokenomics, How to Buy) */
+section {
+  padding: 100px 20px;
+  text-align: center;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.6); /* Напівпрозорий чорний для читабельності */
+  max-width: 900px; /* Обмеження ширини контенту */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Тінь */
+  margin-bottom: 50px;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Кнопка CTA */
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #e94560;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+  background: #ff6363;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgb(208, 202, 100);
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .image-left,
+  .image-right {
+    width: 100px; /* Зменшення розміру зображень для мобільних */
+  }
+
+  section {
+    padding: 60px 15px;
+  }
+}
