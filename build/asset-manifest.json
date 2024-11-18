@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/foxycoin/static/css/main.0a29b059.css",
+    "main.js": "/foxycoin/static/js/main.1ed4158a.js",
+    "static/media/fox.png": "/foxycoin/static/media/fox.2d43a9145a528569a1d5.png",
+    "static/media/rocket.png": "/foxycoin/static/media/rocket.4a4406d7856cb217f5b6.png",
+    "static/media/play.png": "/foxycoin/static/media/play.bc6ce846ae2d4807d29d.png",
+    "static/media/Space.png": "/foxycoin/static/media/Space.bee2db3d7d420814c034.png",
+    "index.html": "/foxycoin/index.html",
+    "main.0a29b059.css.map": "/foxycoin/static/css/main.0a29b059.css.map",
+    "main.1ed4158a.js.map": "/foxycoin/static/js/main.1ed4158a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a29b059.css",
+    "static/js/main.1ed4158a.js"
+  ]
+}
